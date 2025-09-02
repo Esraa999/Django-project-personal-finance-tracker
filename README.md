@@ -35,7 +35,7 @@ A Django-based web application for tracking personal income and expenses with RE
 
 1. **Clone/Download the project**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Esraa999/Django-project-personal-finance-tracker
    cd personal-finance-tracker
    ```
 

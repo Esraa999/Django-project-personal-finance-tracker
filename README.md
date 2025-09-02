@@ -20,47 +20,51 @@ A Django-based web application for tracking personal income and expenses with RE
 
 The project follows a modular Django architecture with separate apps for accounts and transactions.
 
-Djangoprojectpersonalfinancetracker/
-├── accounts/
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── serializers.py
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
-├── transactions/
-│   ├── management/
-│   │   ├── __init__.py
-│   │   └── commands/
-│   │       ├── __init__.py
-│   │       ├── create_sample_data.py
-│   │       └── generate_monthly_summaries.py
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── filters.py
-│   ├── models.py
-│   ├── serializers.py
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
-├── config/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
+finance_tracker/
+├── accounts/ # Handles user accounts, authentication & profiles
+│ ├── init.py
+│ ├── admin.py # Admin panel customization
+│ ├── apps.py # Django app configuration
+│ ├── models.py # Database models for accounts
+│ ├── serializers.py # DRF serializers for accounts API
+│ ├── tests.py # Unit tests for accounts app
+│ ├── urls.py # Accounts-specific URL routes
+│ └── views.py # Views & API endpoints for accounts
+
+├── transactions/ # Manages transactions, summaries & reports
+│ ├── management/
+│ │ ├── init.py
+│ │ └── commands/
+│ │ ├── init.py
+│ │ ├── create_sample_data.py # Creates sample test data
+│ │ └── generate_monthly_summaries.py # Generates monthly summaries automatically
+│ ├── init.py
+│ ├── admin.py # Admin configurations for transactions
+│ ├── apps.py
+│ ├── filters.py # API filters for transactions
+│ ├── models.py # Transaction models
+│ ├── serializers.py # DRF serializers for transactions API
+│ ├── tests.py # Unit tests for transactions app
+│ ├── urls.py # URLs specific to transactions
+│ └── views.py # API views for transactions
+
+├── config/ # Core project configuration
+│ ├── init.py
+│ ├── asgi.py
+│ ├── settings.py # Project settings, environment variables
+│ ├── urls.py # Root URL configuration
+│ └── wsgi.py
+
 ├── templates/
-│   └── index.html
-├── .env.example
-├── docker-compose.yml
-├── Dockerfile
-├── entrypoint.sh
-├── manage.py
-├── README.md
-└── requirements.txt
+│ └── index.html # Main landing page template
+
+├── .env.example # Sample environment variables file
+├── docker-compose.yml # Docker compose configuration
+├── Dockerfile # Docker image configuration
+├── entrypoint.sh # Docker entrypoint script
+├── manage.py # Django CLI management tool
+├── README.md # Project documentation
+└── requirements.txt # Python dependencies
 
 
 ## 🖼 Test Images

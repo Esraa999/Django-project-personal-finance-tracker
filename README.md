@@ -16,6 +16,63 @@ A Django-based web application for tracking personal income and expenses with RE
 - **PostgreSQL Database**: Production-ready database
 - **Automated Cron Jobs**: Monthly summary generation
 
+## 📂 Project Structure
+
+The project follows a modular Django architecture with separate apps for accounts and transactions.
+
+Djangoprojectpersonalfinancetracker/
+├── accounts/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── transactions/
+│   ├── management/
+│   │   ├── __init__.py
+│   │   └── commands/
+│   │       ├── __init__.py
+│   │       ├── create_sample_data.py
+│   │       └── generate_monthly_summaries.py
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── filters.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── config/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── templates/
+│   └── index.html
+├── .env.example
+├── docker-compose.yml
+├── Dockerfile
+├── entrypoint.sh
+├── manage.py
+├── README.md
+└── requirements.txt
+
+
+## 🖼 Test Images
+
+I have added a `test_images` folder that contains screenshots demonstrating the project setup and functionality.  
+It includes the following subfolders:
+
+- **postman_screenshot/** → Contains API testing screenshots from Postman.
+- **postgres_screenshot/** → Contains PostgreSQL database setup and query screenshots.
+- **django_website/** → Contains screenshots of the Django website interface.
+
+
 ## 🏗️ Tech Stack
 
 - **Backend**: Django 4.2.7, Django REST Framework
@@ -384,14 +441,5 @@ docker-compose exec db psql -U postgres -d finance_tracker
 - **Bank Integration**: Import transactions from bank APIs
 - **Mobile App**: React Native mobile application
 
-## 🖼 Test Images
-
-I have added a `test_images` folder that contains screenshots demonstrating the project setup and functionality.  
-It includes the following subfolders:
-
-- **postman_screenshot/** → Contains API testing screenshots from Postman.
-- **postgres_screenshot/** → Contains PostgreSQL database setup and query screenshots.
-- **django_website/** → Contains screenshots of the Django website interface.
 
 
-**Happy tracking your finances! 💰**
